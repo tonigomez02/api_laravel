@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\api;
 
 use App\Http\Controllers\Controller;
+use App\Models\Event;
 use Illuminate\Http\Request;
 
 class EventsController extends Controller
@@ -14,7 +15,8 @@ class EventsController extends Controller
      */
     public function index()
     {
-        //
+        $events = Event::all();
+        return $events;
     }
 
     /**
@@ -25,7 +27,7 @@ class EventsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
     }
 
     /**
