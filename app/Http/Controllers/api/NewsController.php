@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\api;
 
 use App\Http\Controllers\Controller;
+use App\Models\News;
 use Illuminate\Http\Request;
 
 class NewsController extends Controller
@@ -14,7 +15,8 @@ class NewsController extends Controller
      */
     public function index()
     {
-        //
+        $news = News::all();
+        return $news;
     }
 
     /**
@@ -25,7 +27,8 @@ class NewsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $new = News::create($request->all());
+        return  $new;
     }
 
     /**
